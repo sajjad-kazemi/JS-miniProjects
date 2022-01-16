@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <title>my site</title>
+    </head>
+    <body>
+        <form onsubmit="submitForm(event)"action="">
+            <div id="formBg">
+                <div id="container">
+                    <label class="labels where" for="firstForm">مبدا</label>
+                <div name="firstForm" class="chooseform" id="firstForm">
+                    <label class="labels" for="countryFromm">کشور</label>
+                    <select onchange="countryChanged(event)" class="selection" name="countryFrom" id="countryFrom">
+                    <option class="firstOption" value="کشور مورد نظرتان را انتخاب کنید">کشور مورد نظرتان را انتخاب کنید</option>
+                    <option value="ایران">ایران</option>
+                    <option value="عراق">عراق</option>
+                    <option value="انگلیس">انگلیس</option>
+                    </select>
+                    <label class="labels" for="cityFromm">شهر</label>
+                    <select onchange="submitcheck()" disabled class="selection" name="cityFrom" id="cityFrom">
+                        <option id="choose" value="کشور مورد نظرتان را انتخاب کنید">کشور مورد نظرتان را انتخاب کنید</option>
+                    </select>
+                </div>
+                <div class="line"></div>
+                <input disabled id="submit" type="submit" value="انتخاب">
+                <label class="labels where" for="secondForm">مقصد</label>
+                <div name="secondForm" class="chooseform" id="secondForm">
+                    <label class="labels" for="countryTo">کشور</label>
+                    <select onchange="countryChanged2(event)" class="selection" name="countryTo" id="countryTo">
+                    <option class="firstOption" value="کشور مورد نظرتان را انتخاب کنید">کشور مورد نظرتان را انتخاب کنید</option>
+                    <option value="ایران">ایران</option>
+                    <option value="عراق">عراق</option>
+                    <option value="انگلیس">انگلیس</option>
+                    </select>
+                    <label class="labels" for="cityTo">شهر</label>
+                    <select onchange="submitcheck()" disabled class="selection" name="cityTo" id="cityTo">
+                        <option id="chooseTo" value="کشور مورد نظرتان را انتخاب کنید">کشور مورد نظرتان را انتخاب کنید</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+        </form>
+        <script src="../js/script.js"></script>
+    </body>
+</html>

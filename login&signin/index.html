@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>my site</title>
+</head>
+<body>
+    <div id="logInCon" style="display:flex;" class="bcontainer">
+        <form class="container" id="logIn">
+            <input oninput="activeLogIn()" class="input" id="lusername" placeholder="Username" type="text">
+            <input oninput="passLen();activeLogIn();" class="input" type="password" id="lpassword" placeholder="Password">
+            <span class="error" id="logInPassErr">Password has atleast 8 characters!</span>
+            <button id="lSubmit" disabled class="btn" >Log in</button>
+            <button  onclick="changeFormToSignIn()" class="btn sbtn" >Sign in</button>
+        </form>
+    </div>
+    <div id="signInCon" style="display:none;" class="bcontainer">
+        <form class="container" id="signIn">
+            <input oninput="activeSignIn();userLen()" class="input" id="susername" placeholder="Username" type="text">
+            <span class="error" id="singInUserErr" >Username should contain 8 characters!</span>
+            <input oninput="spassLen();activeSignIn();" class="input" type="password" id="spassword" placeholder="Password">
+            <input class="input" type="password" id="aspassword" placeholder="Accept Password">
+            <span class="error" id="signInPassErr">passwords are not same!</span>
+            <button disabled id="sSubmit" class="btn sbtn" >Sign in</button>
+            <button class="btn" onclick="changeFormToLogIn()" >Log in</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>

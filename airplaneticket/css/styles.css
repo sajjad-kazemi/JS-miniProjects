@@ -1,0 +1,85 @@
+.selection{
+    width: 300px;
+    background-color:rgb(37, 198, 219);
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 14px;
+}
+.labels{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 3, 177);
+    font-size:20px;
+    color:white;
+    width: 4em;
+    height: 2em;
+    padding: 6px;
+    text-align: center;
+    border-radius:1em;
+    transform: translateX(90px);
+}
+.chooseform{
+    display: flex;
+    flex-direction: column;
+}
+.selection option:disabled{
+    color: rgb(175, 144, 149);
+}
+.line{
+    width: 2px;
+    height: 90%;
+    border-left: 5px solid yellowgreen;
+    border-radius: 3px;
+}
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+    background:rgba(0,0,0,.6);
+    padding: 4em;
+    width: 50em;
+    border-radius: 40px;
+}
+#formBg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height:100vh;
+    background: url("../img/Beautiful\ Landscapes\ Wallpapers_YasDL.com\ \(23\).jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+#submit{
+    position: absolute;
+    transform: translateY(2rem);
+    align-self: flex-end;
+    justify-self: flex-end;
+    width: 7em;
+    height: 2em;
+    color: white;
+    background: yellowgreen;
+    font-weight: bolder;
+    font-size:1.1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+#submit:disabled{
+    background:rgb(175, 144, 149);
+    color: gray;
+}
+.where{
+    position: relative;
+    transform: translateY(-7em) translateX(-8em);
+    background-color:white;
+    color: black;
+}
