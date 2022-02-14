@@ -19,7 +19,6 @@ function openModal(e) {
     target.style.display = 'inline'
 }
 function closeModal(e){
-    console.log(e.target)
     if(e.target == modalParent){
         modalParent.style.display = "none"
         section.style.filter = ""
