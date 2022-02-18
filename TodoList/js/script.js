@@ -10,7 +10,7 @@ if(localStorage.length === 0){
         if (i === "todoCounter"){
             continue;
         } else if("savedTodo" === i.substring(0,9)){
-            var item = $.createElement('div');
+            let item = $.createElement('div');
             item.innerHTML = localStorage.getItem(i)
             item.setAttribute("class","todoItem"+" "+"savedTodo"+i[9])
             item.setAttribute("oncontextmenu","deleteItem(event)")
@@ -20,11 +20,12 @@ if(localStorage.length === 0){
     }
 };
 function addItem(){
+    if (Todo.value ===""){
+    alert("insert a note!")
+    return
+}
     var item = $.createElement('div');
     item.innerHTML = Todo.value
-    if (Todo.value ===""){
-        item.innerHTML = "empty"
-    }
     item.setAttribute("class","todoItem"+" "+"savedTodo"+todoCounter)
     item.setAttribute("oncontextmenu","deleteItem(event)")
     item.style.userSelect = "none"
@@ -44,7 +45,6 @@ function enterFunc(event){
 function deleteItem(event){
     event.preventDefault();
     var itemClass = event.target.classList[1];
-    console.log(itemClass);
     items.removeChild(event.target);
     localStorage.removeItem(itemClass);
 };
