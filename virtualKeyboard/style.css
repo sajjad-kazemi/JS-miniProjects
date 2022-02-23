@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap');
+
+*,*::after,*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.textContainer{
+    display:flex;
+    justify-content:center;
+    padding:2rem;
+    width: 100%;
+    height: fit-content;
+}
+#textarea{
+    overflow:auto;
+    resize:vertical;
+    border: .5px solid gray;
+    padding:1rem;
+    font-family: 'Abel','sans-serif';
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing:.5px;
+    font-weight: 500;
+}
+#textarea:focus{
+    border:.5px solid gray;
+}
+.keyboard{
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(20 , minmax(auto,1rem));
+    grid-template-rows: 3rem;
+    grid-auto-rows: 3rem;
+    grid-auto-flow:row ;
+    gap:.25rem;
+    padding:3rem;
+    width: 100%;
+    height:fit-content;
+}
+.key{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding:1rem;
+    grid-column: span 2;
+    grid-row:span 1;
+    border:3px inset linear-gradient(90deg,gray,lightgray);
+    background-color: hsl(200,70%,45%);
+    color:white;
+    text-transform:uppercase;
+    font-family: 'Bebas Neue','cursive';
+    font-weight: 200;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor:pointer;
+    user-select: none;
+}
+.key:active{
+    border-color:linear-gradient(gray,lightgray)
+}
+.large{
+    grid-column:span 3;
+}
+.spacekey{
+    grid-column: span 10;
+    grid-row:span 1;
+    border-width: 2px;
+}

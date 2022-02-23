@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <title>task management</title>
+    </head>
+    <body>
+        <h1 class="title">Task Management</h1>
+        <div class="datas">
+            <input
+                id="taskInput"
+                type="text"
+                class="input task"
+                placeholder="وظیفه مورد نظر"
+            />
+            <select id="selectEmployee" class="users-select input">
+                <option disabled="true" selected value="">کارمند مورد نظر</option>
+            </select>
+            <input id="submitTask" type="button" value="ثبت" class="btn input" />
+        </div>
+
+        <div id="users" class="users">
+            <div data-name="ali" class="user user-ali">
+                <h4>علی</h4>
+            </div>
+            <div data-name="amin" class="user user-amin">
+                <h4>امین</h4>
+            </div>
+            <div data-name="mohammad" class="user user-mohammad">
+                <h4>محمد</h4>
+            </div>
+            <div data-name="babak" class="user user-babak">
+                <h4>بابک</h4>
+            </div>
+        </div>
+
+        <div id="tasks" class="tasks">
+            <div class="user-tasks ali-tasks">
+                <div class="main-task invs"></div>
+            </div>
+
+            <div class="user-tasks amin-tasks">
+                <div class="main-task invs"></div>
+            </div>
+
+            <div class="user-tasks mohammad-tasks">
+                <div class="main-task invs"></div>
+            </div>
+
+            <div class="user-tasks babak-tasks">
+                <div class="main-task invs"></div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
